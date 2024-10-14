@@ -1,12 +1,107 @@
-* {
-    margin: 0;
+*{
     padding: 0;
-    /* outline: solid 1px red; */
+    margin: 0;
+    font-family: cursive;
+    /* outline: 1px solid red; */
 }
 
+:root {
+    --primary-color: #2B86BC; 
+    --secondary-color: #64C2FF;
+    --tertiary-color: #FFA164;
+}
+
+/*emplacement du header-->*/
+header {
+	background-image: url(./public/banner.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: black;
+	padding: 20px;
+}
+header nav img {
+	height: 100px;
+}
+#logo {
+	border-radius: 50px;
+	border: 2px solid white;
+}
+#btnFormulaire {
+	width: 50px;
+	height: 50px;
+}
+header nav ul li {
+	list-style: none;
+}
+header nav ul li a {
+	text-decoration: none;
+	color: black;
+}
+header h1 {
+	text-align: center;
+	font-size: 30px;
+	padding-bottom: 1em;
+}
+header nav {
+	padding: 1em 1em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header nav div {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+header nav div ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.menu-container {
+	display: flex;
+	align-items: center;
+}
+
+.burger {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	background-color: #ffa164;
+	padding: 10px;
+}
+
+.bar {
+	width: 40px;
+	height: 7px;
+	background-color: black;
+	margin: 5px 0;
+	transition: 0.3s;
+}
+
+.nav {
+	display: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 15px;
+}
+
+.nav.active {
+	display: flex;
+	gap: 1em;
+	padding: 50px;
+	background-color: #2b86bc;
+}
+
+/*-emplacement du body*/
+/*emplacement du main*/
 body {
     background-color: #FFFFF0 ;
-        margin: 0 3em;
 }
 
 
@@ -18,7 +113,7 @@ h2 {
 body p {
     text-align: justify;
     color: black;
-
+    margin: 0 3em;
 }
 
 .Cards {
@@ -72,7 +167,98 @@ body p {
     width: 150px;
 }
 
+/* Footer-Global */
+footer {
+    background-color: var(--primary-color);
+    align-items: center;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    min-height: 100vh;
+}
+
+/* Section contactez-nous */
+footer section.contactez-nous a {
+    margin-bottom: 10px;
+    margin-left: 28px;
+    padding: 5px;
+    color: black;
+    background-color: var(--secondary-color);
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 20px;
+    width: 80%;
+}
+
+/* Section Développeurs */
+footer section h3 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+footer section ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer section ul li {
+    font-size: 16px;
+    color: black;
+}
+
+/* Section Liens */
+footer section a {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 20px;
+    width: 100%;
+    font-family:'Times New Roman', Times, serif
+}
+
+/* Section Copyright */
+footer section p {
+    font-size: 14px;
+    color: black;
+    text-align: center;
+
+}
+
+p{
+    font-weight: bold
+}
+
+
+/* Section Mediaqueries */
+
 @media (min-width: 768px) {
+    .burger {
+		display: none;
+	}
+
+	.nav {
+		display: flex;
+		gap: 1em;
+		flex-direction: row;
+	}
+	.menu-container {
+		background-color: transparent;
+	}
+	.nav.active {
+		background-color: transparent;
+	}
+	#btnFormulaire {
+		width: 70px;
+		height: 70px;
+	}
+
+/* Body à partir d'ici*/
 
     .Description {
         padding: 0 15em;
@@ -117,5 +303,52 @@ body p {
     .Photo {
         max-width: 150px;
         flex: 0 1 30%;
+    }
+}
+
+
+@media screen and (min-width: 425px) {
+    
+    /* Footer-Global */
+    footer {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    footer section {
+        margin-bottom: 20px;
+        width: auto;
+    }
+
+    /* Section Contactez-nous */
+    footer section.contactez-nous {
+        margin-left: 25px;
+        text-align: left;
+    }
+    /* Section Développeurs */
+    footer section h3, footer section li {
+        text-align: center;
+    }
+
+    footer section a {
+        width: 90%; 
+        margin-bottom: 10px; 
+        text-align: center;
+    }
+
+    footer section.buttons {
+        width: 90%;
+        margin-bottom: 10px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* Section Copyright */
+    footer section.crewCodeIle {
+        grid-column: 2;
+        text-align: center;
     }
 }

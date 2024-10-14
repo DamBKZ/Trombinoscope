@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,31 @@
     <link rel="shortcut icon" href="./favicon-crew-code-ile.ico" type="image/x-icon">
     <title>Trombinoscope du Crew Code Ile</title>
 </head>
+
 <body>
 
     <script src="script.js"></script>
 
-<!--emplacement du header-->
+    <!--emplacement du header-->
+    <header>
+        <nav>
+            <img src="./crew_code_ile.jpeg.jpg" alt="logo de la Crew Code Ile" id="logo">
+            <div class="menu-container">
+                <div class="burger" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav" id="nav">
+                    <a href="#"><img src="./public/bouton-add-orange.png" id="btnFormulaire"></a>
+                    <li><a href="#">Description</a></li>
+                    <li><a href="#">Le Trombinoscope</a></li>
+                    <li><a href="#">Contactez-nous</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1 id="#trombinoscope">Trombinoscope du Crew Code Ile</h1>
+    </header>
 
 
 
@@ -43,57 +64,57 @@
 
 
 
+    <!--emplacement du body-->
+    <!--emplacement du main-->
+    <section class="Description">
+        <h2>Description</h2>
+        <p>Nous avons souhaité faire ce trombinoscope dans le cadre du projet n°1 de notre formation développeur
+            web / mobile. Nous avons choisi ce projet car c'est celui qui nous correspond le mieux et avec lequel
+            nous avons pu mettre en pratique les connaissances acquises sur le premier mois.
+        </p>
+    </section>
 
+    <h2>Le trombi</h2>
+    <section class="Cards">
+        <article class="Photo">
+            <a href="#">
+                <img src="public/aurelien.jpg" alt="Aurélien en couleur">
+            </a>
+        </article>
+        <article class="Photo">
+            <a href="#">
+                <img src="public/benjalin.jpg" alt="Benjamin en couleur">
+            </a>
+        </article>
+        <article class="Photo">
+            <a href="#">
+                <img src="public/damien.jpg" alt="Damien en couleur">
+            </a>
+        </article>
+        <article class="Photo">
+            <a href="#">
+                <img src="" alt="Amandine en couleur">
+            </a>
+        </article>
+        <article class="Photo">
+            <a href="#">
+                <img src="" alt="Marco en couleur">
+            </a>
+        </article>
+    </section>
 
+    <section class="Add-bouton">
+        <article class="bouton">
+            <a href="#">
+                <img src="public/bouton-add-orange.png" alt="Bouton d'ajout de nouvelle photo">
+            </a>
+        </article>
+    </section>
 
 
 
-<!--emplacement du body-->
-<!--emplacement du main-->
-<section class="Description">
-    <h2>Description</h2>
-    <p>Nous avons souhaité faire ce trombinoscope dans le cadre du projet n°1 de notre formation développeur
-        web / mobile. Nous avons choisi ce projet car c'est celui qui nous correspond le mieux et avec lequel
-        nous avons pu mettre en pratique les connaissances acquises sur le premier mois.
-    </p>
-</section>
 
-<h2>Le trombi</h2>
-<section class="Cards">
-<article class="Photo">
-        <a href="#">
-        <img src="public/aurelien.jpg" alt="Aurélien en couleur">
-    </a>
-</article>
-<article class="Photo">
-    <a href="#">
-    <img src="public/benjalin.jpg" alt="Benjamin en couleur">
-</a>
-</article>
-<article class="Photo">
-    <a href="#">
-    <img src="public/damien.jpg" alt="Damien en couleur">
-</a>
-</article>
-<article class="Photo">
-    <a href="#">
-    <img src="" alt="Amandine en couleur">
-</a>
-</article>
-<article class="Photo">
-    <a href="#">
-    <img src="" alt="Marco en couleur">
-</a>
-</article>
-</section>
 
-<section class="Add-bouton">
-    <article class="bouton">
-    <a href="#">
-        <img src="public/bouton-add-orange.png" alt="Bouton d'ajout de nouvelle photo">
-    </a>
-</article>
-</section>
 
 
 
@@ -136,13 +157,33 @@
 
 
 
+    <!--emplacement du footer-->
+    <footer>
+        <section class="contactez-nous">
+            <a href="mailto:email@example.com?subject=Sujet%20du%20mail&body=Contenu%20du%20message">Contactez-nous</a>
+        </section>
+        <section class="developers">
+            <h3>Développeurs</h3>
+            <ul>
+                <li>Benjamin</li>
+                <li>Aurélien</li>
+                <li>Damien</li>
+            </ul>
+        </section>
+        <section class="buttons">
+            <a
+                href="https://www.francenum.gouv.fr/guides-et-conseils/developpement-commercial/site-web/rediger-des-conditions-generales-dutilisation">CGU</a>
+            <a href="https://www.economie.gouv.fr/politique-confidentialite">Politique de confidentialité</a>
+            <a href="#trombinoscope">Revenir en haut de la page</a>
+        </section>
+        <section class="crewCodeIle">
+            <p>© 2024 - Crew Code Ile</p>
+        </section>
 
 
 
-
-
-<!--emplacement du footer-->
-
+    </footer>
 
 </body>
+
 </html>
