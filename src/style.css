@@ -1,91 +1,121 @@
 * {
+    margin: 0;
     padding: 0;
-    margin: 0;}
-
-    /*emplacement du header-->*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*-emplacement du body*/
-/*emplacement du main*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*emplacement du footer-*/
+    /* outline: solid 1px red; */
+}
+
+body {
+    background-color: #FFFFF0 ;
+        margin: 0 3em;
+}
+
+
+h2 {
+    text-align: center;
+    color: black;
+    margin: 1em 0;
+}
+body p {
+    text-align: justify;
+    color: black;
+
+}
+
+.Cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+}
+
+.Photo {
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Photo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.Add-bouton {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+}
+
+.bouton {
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bouton img {
+    height: 150px;
+    width: 150px;
+}
+
+@media (min-width: 768px) {
+
+    .Description {
+        padding: 0 15em;
+    }
+
+    .Cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 15em;
+    }
+
+    .bouton {
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+}
+
+.Photo {
+    max-width: 150px;
+    flex: 0 1 45%;
+}
+
+@media (min-width: 1024px) {
+
+    .Description {
+        padding: 0 15em;
+    }
+
+    .Cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        padding: 0 22em;
+    }
+
+    .bouton {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .Photo {
+        max-width: 150px;
+        flex: 0 1 30%;
+    }
+}
