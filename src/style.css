@@ -1,6 +1,15 @@
 * {
     padding: 0;
-    margin: 0;}
+    margin: 0;
+    font-family: cursive;
+    /* outline: 1px solid red; */
+}
+
+:root {
+    --primary-color: #2B86BC; 
+    --secondary-color: #64C2FF;
+    --tertiary-color: #FFA164;
+}
 
     /*emplacement du header-->*/
 
@@ -88,4 +97,115 @@
 
 
 
-/*emplacement du footer-*/
+/* Footer-Global */
+footer {
+    background-color: var(--primary-color);
+    align-items: center;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    min-height: 100vh;
+}
+
+/* Section contactez-nous */
+footer section.contactez-nous a {
+    margin-bottom: 10px;
+    margin-left: 28px;
+    padding: 5px;
+    color: black;
+    background-color: var(--secondary-color);
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 20px;
+    width: 80%;
+}
+
+/* Section Développeurs */
+footer section h3 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+footer section ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer section ul li {
+    font-size: 16px;
+    color: black;
+}
+
+/* Section Liens */
+footer section a {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 20px;
+    width: 100%;
+    font-family:'Times New Roman', Times, serif
+}
+
+/* Section Copyright */
+footer section p {
+    font-size: 14px;
+    color: black;
+    text-align: center;
+
+}
+
+p{
+    font-weight: bold
+}
+
+@media screen and (min-width: 425px) {
+    
+    /* Footer-Global */
+    footer {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    footer section {
+        margin-bottom: 20px;
+        width: auto;
+    }
+
+    /* Section Contactez-nous */
+    footer section.contactez-nous {
+        margin-left: 25px;
+        text-align: left;
+    }
+    /* Section Développeurs */
+    footer section h3, footer section li {
+        text-align: center;
+    }
+
+    footer section a {
+        width: 90%; 
+        margin-bottom: 10px; 
+        text-align: center;
+    }
+
+    footer section.buttons {
+        width: 90%;
+        margin-bottom: 10px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* Section Copyright */
+    footer section.crewCodeIle {
+        grid-column: 2;
+        text-align: center;
+    }
+}
