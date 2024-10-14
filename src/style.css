@@ -11,41 +11,114 @@
     --tertiary-color: #FFA164;
 }
 
-    /*emplacement du header-->*/
+/*emplacement du header-->*/
+header {
+	background-image: url(./public/banner.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: black;
+	padding: 20px;
+}
+header nav img {
+	height: 100px;
+}
+#logo {
+	border-radius: 50px;
+	border: 2px solid white;
+}
+#btnFormulaire {
+	width: 50px;
+	height: 50px;
+}
+header nav ul li {
+	list-style: none;
+}
+header nav ul li a {
+	text-decoration: none;
+	color: black;
+}
+header h1 {
+	text-align: center;
+	font-size: 30px;
+	padding-bottom: 1em;
+}
+header nav {
+	padding: 1em 1em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header nav div {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+header nav div ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
+.menu-container {
+	display: flex;
+	align-items: center;
+}
 
+.burger {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	background-color: #ffa164;
+	padding: 10px;
+}
 
+.bar {
+	width: 40px;
+	height: 7px;
+	background-color: black;
+	margin: 5px 0;
+	transition: 0.3s;
+}
 
+.nav {
+	display: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 15px;
+}
 
+.nav.active {
+	display: flex;
+	gap: 1em;
+	padding: 50px;
+	background-color: #2b86bc;
+}
 
+@media (min-width: 768px) {
+	.burger {
+		display: none;
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	.nav {
+		display: flex;
+		gap: 1em;
+		flex-direction: row;
+	}
+	.menu-container {
+		background-color: transparent;
+	}
+	.nav.active {
+		background-color: transparent;
+	}
+	#btnFormulaire {
+		width: 70px;
+		height: 70px;
+	}
+}
 
 /*-emplacement du body*/
 /*emplacement du main*/
