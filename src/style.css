@@ -356,3 +356,68 @@ p{
         text-align: center;
     }
 }
+
+
+#formContainer {
+    background-color: #FFA164; /* Couleur de fond */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    width: 300px; /* Largeur fixe pour le formulaire */
+    display: none; /* Utiliser Flexbox */
+    flex-direction: column; /* Alignement vertical des enfants */
+    align-items: center; /* Centre horizontalement les enfants */
+    position: fixed; /* Positionnement fixe */
+    top: 50%; /* Position verticale */
+    left: 50%; /* Position horizontale */
+    transform: translate(-50%, -50%); /* Ajuste pour centrer */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    z-index: 1000; /* Mettre au-dessus des autres éléments */
+}
+
+
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-buttons {
+    display: flex; /* Utilise Flexbox pour aligner les boutons */
+    justify-content: space-between; /* Espace entre les boutons */
+    margin-top: 20px; /* Marge au-dessus des boutons */
+}
+
+.form-buttons button {
+    padding: 10px 15px; /* Ajout de padding pour un meilleur look */
+    border-radius: 5px; /* Coins arrondis pour les boutons */
+    border: none; /* Enlever la bordure par défaut */
+    cursor: pointer; /* Curseur pointer pour indiquer un bouton cliquable */
+}
+
+/* Couleurs différentes pour chaque bouton */
+#saveProfile {
+    background-color: #007BFF; /* Couleur pour le bouton Enregistrer */
+    color: white; /* Texte blanc */
+}
+
+#cancelButton {
+    background-color: #fa3205; /* Couleur pour le bouton Annuler */
+    color: white; /* Texte blanc */
+}
+
+/* Optionnel : ajouter un effet au survol */
+.form-buttons button:hover {
+    opacity: 0.9; /* Légère réduction de l'opacité au survol */
+}
+#formContainer h3 {
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 20px;
+}

@@ -10,12 +10,9 @@
     <title>Trombinoscope du Crew Code Ile</title>
 </head>
 
-<body>
-
-    <script src="script.js"></script>
-
+<body id="body">
     <!--emplacement du header-->
-    <header>
+    <header id="header">
         <nav>
             <img src="./crew_code_ile.jpeg.jpg" alt="logo de la Crew Code Ile" id="logo">
             <div class="menu-container">
@@ -25,10 +22,10 @@
                     <div class="bar"></div>
                 </div>
                 <ul class="nav" id="nav">
-                    <a href="#"><img src="./public/bouton-add-orange.png" id="btnFormulaire"></a>
-                    <li><a href="#">Description</a></li>
-                    <li><a href="#">Le Trombinoscope</a></li>
-                    <li><a href="#">Contactez-nous</a></li>
+                    <a href="#Formulaire"><img src="./public/bouton-add-orange.png" id="btnFormulaire"></a>
+                    <li><a href="#Description">Description</a></li>
+                    <li><a href="#Le trombi">Le Trombinoscope</a></li>
+                    <li><a href="#contactez-nous">Contactez-nous</a></li>
                 </ul>
             </div>
         </nav>
@@ -36,7 +33,7 @@
     </header>
     <!--emplacement du body-->
     <!--emplacement du main-->
-    <section class="Description">
+    <section id="Description" class="Description">
         <h2>Description</h2>
         <p>Nous avons souhaité faire ce trombinoscope dans le cadre du projet n°1 de notre formation développeur
             web / mobile. Nous avons choisi ce projet car c'est celui qui nous correspond le mieux et avec lequel
@@ -44,7 +41,7 @@
         </p>
     </section>
 
-    <h2>Le trombi</h2>
+    <h2 id="Le trombi">Le trombi</h2>
     <section class="Cards">
         <article class="Photo">
             <a href="#">
@@ -53,30 +50,65 @@
         </article>
         <article class="Photo">
             <a href="#">
-                <img src="public/benjalin.jpg" alt="Benjamin en couleur">
+                <img src="public/benjamin.jpg" alt="Benjamin en couleur">
             </a>
         </article>
         <article class="Photo">
             <a href="#">
-                <img src="public/damien.jpg" alt="Damien en couleur">
+                <img src="public/Damien2.jpg" alt="Damien en couleur">
             </a>
         </article>
         <article class="Photo">
             <a href="#">
-                <img src="" alt="Amandine en couleur">
+                <img src="public/Amandine.jpg" alt="Amandine en couleur">
             </a>
         </article>
         <article class="Photo">
             <a href="#">
-                <img src="" alt="Marco en couleur">
+                <img src="public/Marco.jpg" alt="Marco en couleur">
             </a>
         </article>
     </section>
 
+    <div id="formContainer">
+        <h3 id="Formulaire">Formulaire</h3>
+        <form id="profileForm">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="biographie">Votre biographie</label>
+            <textarea id="biographie" name="biographie" required></textarea>
+
+            <label for="objectifs">Vos objectifs</label>
+            <textarea id="objectifs" name="objectifs" required></textarea>
+
+            <label for="experience">Vos expériences</label>
+            <textarea id="experience" name="experience" required></textarea>
+
+            <label for="linkedin">Lien LinkedIn</label>
+            <input type="url" id="linkedin" name="linkedin">
+
+            <label for="portfolio">Lien Portfolio</label>
+            <input type="url" id="portfolio" name="portfolio">
+
+            <label for="photo">Télécharger votre photo de profil</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+
+            <div class="form-buttons">
+                <button type="button" id="cancelButton">Annuler</button>
+                <button type="submit" id="saveProfile">Enregistrer</button>
+            </div>
+
+        </form>
+    </div>
+
     <section class="Add-bouton">
         <article class="bouton">
-            <a href="#">
-                <img src="public/bouton-add-orange.png" alt="Bouton d'ajout de nouvelle photo">
+            <a href="#Formulaire">
+                <img src="public/bouton-add-orange.png" alt="Bouton d'ajout de nouvelle photo" id="btnFormulaireBody">
             </a>
         </article>
     </section>
@@ -109,7 +141,7 @@
         </section>
 
     </footer>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
