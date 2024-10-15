@@ -98,8 +98,8 @@ header nav div ul {
 	background-color: #2b86bc;
 }
 
-/*-emplacement du body*/
-/*emplacement du main*/
+/*emplacement du body - main*/
+
 body {
     background-color: #FFFFF0 ;
 }
@@ -167,13 +167,15 @@ body p {
     width: 150px;
 }
 
+/*emplacement du Footer-Global */
+
 /* Footer-Global */
 footer {
     background-color: var(--primary-color);
     align-items: center;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    min-height: 100vh;
+    min-height: 20vh;
 }
 
 /* Section contactez-nous */
@@ -192,6 +194,7 @@ footer section.contactez-nous a {
 
 /* Section Développeurs */
 footer section h3 {
+    padding-top: 10px;
     text-align: center;
     font-size: 18px;
     font-weight: bold;
@@ -224,6 +227,7 @@ footer section a {
 
 /* Section Copyright */
 footer section p {
+    margin: 0;
     font-size: 14px;
     color: black;
     text-align: center;
