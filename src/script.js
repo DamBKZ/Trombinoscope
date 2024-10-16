@@ -1,6 +1,6 @@
 function toggleMenu() {
-    const nav = document.getElementById('nav');
-    nav.classList.toggle('active');
+	const nav = document.getElementById("nav");
+	nav.classList.toggle("active");
 }
 
 // Formulaires
@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         resetForm();
     }
 
-    btnHeader.addEventListener("click", toggleForm);
-    btnBody.addEventListener("click", toggleForm);
+	const form = document.getElementById("profileForm");
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
