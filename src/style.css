@@ -326,6 +326,10 @@ p {
 	}
 }
 
+.Photo img:hover {
+    filter: grayscale(100%);
+}
+
 @media screen and (min-width: 425px) {
 	/* Footer-Global */
 	footer {
