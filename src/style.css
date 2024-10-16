@@ -32,6 +32,13 @@ header nav img {
 	width: 50px;
 	height: 50px;
 }
+
+#btnFormulaire:hover {
+	filter: hue-rotate(200deg);
+}
+#btnFormulaireBody:hover {
+	filter: hue-rotate(200deg);
+}
 header nav ul li {
 	list-style: none;
 }
@@ -41,7 +48,7 @@ header nav ul li a {
 }
 header h1 {
 	text-align: center;
-	font-size: 30px;
+	font-size: 35px;
 	padding-bottom: 1em;
 }
 header nav {
@@ -59,6 +66,7 @@ header nav div ul {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	font-weight: bold;
 }
 
 .menu-container {
@@ -71,8 +79,9 @@ header nav div ul {
 	display: flex;
 	flex-direction: column;
 	margin: 20px;
-	background-color: #ffa164;
+	background-color: var(--tertiary-color);
 	padding: 10px;
+	box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.7);
 }
 
 .bar {
@@ -95,7 +104,7 @@ header nav div ul {
 	display: flex;
 	gap: 1em;
 	padding: 50px;
-	background-color: #2b86bc;
+	background-color: var(--primary-color);
 }
 
 /*emplacement du body - main*/
@@ -113,6 +122,9 @@ body p {
 	text-align: justify;
 	color: black;
 	margin: 0 3em;
+}
+section p {
+	font-weight: normal;
 }
 
 .Cards {
@@ -133,6 +145,7 @@ body p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.7);
 }
 
 .Photo img {
@@ -184,6 +197,7 @@ footer section.contactez-nous a {
 	padding: 5px;
 	color: black;
 	background-color: var(--secondary-color);
+	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
 	text-align: center;
 	text-decoration: none;
 	font-size: 16px;
@@ -285,7 +299,7 @@ p {
 
 @media (min-width: 1024px) {
 	.formulaireBtn {
-		margin-left: 18%;
+		margin-left: 16%;
 	}
 	.nav {
 		flex-direction: row;
@@ -359,7 +373,7 @@ p {
 }
 
 #formContainer {
-	background-color: #ffa164; /* Couleur de fond */
+	background-color: var(--tertiary-color); /* Couleur de fond */
 	padding: 20px; /* Espacement interne */
 	border-radius: 10px; /* Coins arrondis */
 	width: 300px; /* Largeur fixe pour le formulaire */
