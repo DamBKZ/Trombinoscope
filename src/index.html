@@ -22,7 +22,8 @@
                     <div class="bar"></div>
                 </div>
                 <ul class="nav" id="nav">
-                    <a href="#Formulaire"><img src="./public/bouton-add-orange.png" id="btnFormulaire"></a>
+                    <a href="#Formulaire"><img src="./public/bouton-add-orange.png" alt="Bouton d'ajout de carte"
+                            id="btnFormulaire"></a>
                     <li><a href="#Description">Description</a></li>
                     <li><a href="#Le trombi">Le Trombinoscope</a></li>
                     <li><a href="#contactez-nous">Contactez-nous</a></li>
@@ -35,41 +36,15 @@
     <!--emplacement du main-->
     <section id="Description" class="Description">
         <h2>Description</h2>
-        <p>Nous avons souhaité faire ce trombinoscope dans le cadre du projet n°1 de notre formation développeur
-            web / mobile. Nous avons choisi ce projet car c'est celui qui nous correspond le mieux et avec lequel
-            nous avons pu mettre en pratique les connaissances acquises sur le premier mois.
-        </p>
+        <p>Nous avons souhaité faire ce trombinoscope dans le cadre du projet n°1 de notre formation développeur web /
+            mobile. Nous avons choisi ce projet car c'est celui qui nous correspond le mieux et avec lequel nous avons
+            pu mettre en pratique les connaissances acquises sur le premier mois.</p>
     </section>
 
     <h2 id="Le trombi">Le trombi</h2>
-    <section class="Cards">
-        <article class="Photo">
-            <a href="#">
-                <img src="public/aurelien.jpg" alt="Aurélien en couleur">
-            </a>
-        </article>
-        <article class="Photo">
-            <a href="#">
-                <img src="public/benjamin.jpg" alt="Benjamin en couleur">
-            </a>
-        </article>
-        <article class="Photo">
-            <a href="#">
-                <img src="public/Damien2.jpg" alt="Damien en couleur">
-            </a>
-        </article>
-        <article class="Photo">
-            <a href="#">
-                <img src="public/Amandine.jpg" alt="Amandine en couleur">
-            </a>
-        </article>
-        <article class="Photo">
-            <a href="#">
-                <img src="public/Marco.jpg" alt="Marco en couleur">
-            </a>
-        </article>
-    </section>
+    <section class="Cards"></section>
 
+    <!-- Premier formulaire pour ajouter une carte -->
     <div id="formContainer">
         <h3 id="Formulaire">Formulaire</h3>
         <form id="profileForm">
@@ -99,9 +74,9 @@
 
             <div class="form-buttons">
                 <button type="button" id="cancelButton">Annuler</button>
+                <button type="button" id="closeInfoForm" style="display: none;">Fermer</button>
                 <button type="submit" id="saveProfile">Enregistrer</button>
             </div>
-
         </form>
     </div>
 
@@ -113,14 +88,11 @@
         </article>
     </section>
 
-<!-- Formulaire d'ajout de photo - état empty -->
-
-<!-- Formulaire d'ajout de photo - état rempli -->
-
     <!--emplacement du footer-->
     <footer>
         <section class="contactez-nous">
-            <a href="mailto:crewcodile@gmail.com.com?subject=Sujet%20du%20mail&body=Contenu%20du%20message">Contactez-nous</a>
+            <a
+                href="mailto:crewcodile@gmail.com.com?subject=Sujet%20du%20mail&body=Contenu%20du%20message">Contactez-nous</a>
         </section>
         <section class="developers">
             <h3>Développeurs</h3>
@@ -139,7 +111,6 @@
         <section class="crewCodeIle">
             <p>© 2024 - Crew Code Ile</p>
         </section>
-
     </footer>
     <script src="script.js"></script>
 </body>

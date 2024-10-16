@@ -3,117 +3,111 @@ function toggleMenu() {
     nav.classList.toggle('active');
 }
 
-//gestion du moueover en desktop
-// Fonction pour gérer le changement d'image et l'affichage des informations
-
-// Récupération des éléments avec la classe "Photo"*/
-
-const photos = document.querySelectorAll('.Photo');
-
-photos.forEach(photo => {  // Création de la variable photo
-    const img = photo.querySelector('img'); // Sélectionne l'image dans chaque photo
-});
-    // Mouseover => image en noir et blanc et afficher le bloc texte
-    photo.addEventListener('mouseover', () => {
-        img.src = img.src.replace('public/aurelien.jpg', 'public/aurelien_n-b.jpg');
-    });
-
-    // Mouseout => remettre l'image en couleur et cacher le bloc texte
-    photo.addEventListener('mouseout', () => {
-        img.src = img.src.replace('public/aurelien_n-b.jpg', 'public/aurelien.jpg');
-    });
+// Formulaires
 document.addEventListener("DOMContentLoaded", function () {
     const btnHeader = document.getElementById("btnFormulaire");
     const btnBody = document.getElementById("btnFormulaireBody");
     const formContainer = document.getElementById("formContainer");
-    
-    // Sélectionner le conteneur des cartes par sa classe
-    const profilesContainer = document.querySelector(".Cards"); // Sélectionner le conteneur avec la classe "Cards"
-    
     const form = document.getElementById("profileForm");
+    const profilesContainer = document.querySelector(".Cards");
+    const saveProfileButton = document.getElementById("saveProfile"); // Référence au bouton Enregistrer
 
     function toggleForm() {
-        formContainer.style.display = formContainer.style.display === "none" || formContainer.style.display === "" ? "block" : "none";
+        formContainer.style.display = (formContainer.style.display === "none" || formContainer.style.display === "") ? "block" : "none";
+        resetForm();
     }
 
     btnHeader.addEventListener("click", toggleForm);
     btnBody.addEventListener("click", toggleForm);
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Empêcher le rechargement de la page
+        event.preventDefault();
 
-        // Récupérer les valeurs des champs du formulaire
-        const prenom = document.getElementById("prenom").value;
-        const nom = document.getElementById("nom").value;
-        const biographie = document.getElementById("biographie").value;
-        const objectifs = document.getElementById("objectifs").value;
+        const firstname = document.getElementById("prenom").value;
+        const name = document.getElementById("nom").value;
+        const biography = document.getElementById("biographie").value;
+        const goals = document.getElementById("objectifs").value;
         const experience = document.getElementById("experience").value;
         const linkedin = document.getElementById("linkedin").value;
         const portfolio = document.getElementById("portfolio").value;
-        const photo = document.getElementById("photo").files[0]; // Récupérer le fichier de l'image téléchargée
+        const picture = document.getElementById("photo").files[0];
 
-        // Debug : Afficher les valeurs dans la console
-        console.log("Prénom:", prenom);
-        console.log("Nom:", nom);
-        console.log("Biographie:", biographie);
-        console.log("Objectifs:", objectifs);
-        console.log("Expérience:", experience);
-        console.log("LinkedIn:", linkedin);
-        console.log("Portfolio:", portfolio);
-
-        // Vérifier que les champs Prénom et Nom sont remplis
-        if (!prenom || !nom) {
-            alert("Prénom et nom sont obligatoires.");
-            return;
-        }
-
-        // Vérifier si le conteneur des cartes existe avant d'ajouter la carte
-        if (!profilesContainer) {
-            console.error("Le conteneur des cartes est introuvable !");
-            return; // Sortir de la fonction si le conteneur n'existe pas
-        }
-
-        // Créer un nouvel élément pour la carte
         const card = document.createElement("article");
-        card.classList.add("Photo"); // Assigner la classe "Photo"
+        card.classList.add("Photo");
 
-        // Générer une URL pour l'image téléchargée
-        const imageUrl = photo ? URL.createObjectURL(photo) : 'public/default.jpg'; // Image par défaut si aucune photo n'est téléchargée
+        const link = document.createElement("a");
+        link.href = "#";
 
-        // Générer le contenu de la nouvelle carte
-        card.innerHTML = `
-            <a href="#">
-                <img src="${imageUrl}" alt="${prenom} ${nom} en couleur">
-            </a>
-            <h3>${prenom} ${nom}</h3>
-            <p><strong>Biographie:</strong> ${biographie}</p>
-            <p><strong>Objectifs:</strong> ${objectifs}</p>
-            <p><strong>Expérience:</strong> ${experience}</p>
-            <p><a href="${linkedin}" target="_blank">LinkedIn</a> | <a href="${portfolio}" target="_blank">Portfolio</a></p>
-        `;
+        const img = document.createElement("img");
+        img.src = picture ? URL.createObjectURL(picture) : 'public/default.jpg';
+        img.alt = `${firstname} ${name}`;
 
-        // Ajouter la nouvelle carte au conteneur des cartes
-        profilesContainer.appendChild(card); // Ajouter la carte au conteneur
+        link.appendChild(img);
+        card.appendChild(link);
 
-        // Réinitialiser le formulaire
+        profilesContainer.appendChild(card);
+
         form.reset();
-        formContainer.style.display = "none"; // Fermer le formulaire
+        formContainer.style.display = "none";
 
-        // Ajouter une classe pour l'animation (facultatif)
-        setTimeout(() => card.classList.add('visible'), 10);
+        card.addEventListener('click', () => {
+            afficherInformationsCarte(firstname, name, biography, goals, experience, linkedin, portfolio);
+        });
+    });
+
+    function afficherInformationsCarte(firstname, name, biography, goals, experience, linkedin, portfolio) {
+        document.getElementById("prenom").value = firstname;
+        document.getElementById("nom").value = name;
+        document.getElementById("biographie").value = biography;
+        document.getElementById("objectifs").value = goals;
+        document.getElementById("experience").value = experience;
+        document.getElementById("linkedin").value = linkedin;
+        document.getElementById("portfolio").value = portfolio;
+
+        formContainer.style.display = "flex"; // Afficher le formulaire
+
+        // Rendre les champs non modifiables
+        setReadonly(true);
+        
+        // Masquer le bouton Enregistrer
+        saveProfileButton.style.display = "none";
+        cancelButton.style.display = "none";
+        closeInfoForm.style.display = "block";
+    }
+
+    function resetForm() {
+        form.reset();
+        setReadonly(false); // Rendre les champs modifiables
+        saveProfileButton.style.display = "block";
+        cancelButton.style.display = "block"; // Afficher le bouton Enregistrer
+    }
+
+    function setReadonly(isReadonly) {
+        document.getElementById("prenom").readOnly = isReadonly;
+        document.getElementById("nom").readOnly = isReadonly;
+        document.getElementById("biographie").readOnly = isReadonly;
+        document.getElementById("objectifs").readOnly = isReadonly;
+        document.getElementById("experience").readOnly = isReadonly;
+        document.getElementById("linkedin").readOnly = isReadonly;
+        document.getElementById("portfolio").readOnly = isReadonly;
+    }
+
+    const closeInfoForm = document.getElementById("closeInfoForm");
+    closeInfoForm.addEventListener("click", function () {
+        formContainer.style.display = "none"; // Fermer le formulaire
     });
 
     document.addEventListener("click", function (event) {
-        const isClickInside = formContainer.contains(event.target) || event.target === btnHeader || event.target === btnBody;
+        const isClickInsideForm = formContainer.contains(event.target) || event.target === btnHeader || event.target === btnBody;
 
-        if (formContainer.style.display === "block" && !isClickInside) {
-            formContainer.style.display = "none"; // Fermer le formulaire si le clic est en dehors
+        if (formContainer.style.display === "block" && !isClickInsideForm) {
+            formContainer.style.display = "none";
         }
     });
 
     const cancelButton = document.getElementById("cancelButton");
-    cancelButton.addEventListener("click", function() {
-        form.reset(); // Réinitialiser les champs
-        formContainer.style.display = "none"; // Fermer le formulaire
+    cancelButton.addEventListener("click", function () {
+        form.reset();
+        formContainer.style.display = "none";
     });
 });
