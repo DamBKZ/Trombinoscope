@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
         resetForm();
     }
 
-	const form = document.getElementById("profileForm");
-
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
