@@ -1,6 +1,6 @@
 Bienvenue dans le projet Trombinoscope du Crew Code Ile ! Ce trombinoscope a été développé pour faciliter la présentation et la découverte des membres de notre communauté. Il permet de visualiser les membres, leurs compétences, et leurs rôles au sein de l’équipe.
 
-Table des matières
+Table des matières :
 Fonctionnalités
 Technologies utilisées
 Installation
@@ -54,5 +54,5 @@ Copier le code
 git push origin ma-nouvelle-fonctionnalité
 Ouvrez une Pull Request.
 
-License
-Ce projet est sous la licence [Nom de la licence] - voir le fichier LICENSE pour plus de détails.
+License :
+Ce projet est sous la licence GNU General Public License (GPL) - voir le fichier LICENSE pour plus de détails.
