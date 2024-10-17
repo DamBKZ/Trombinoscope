@@ -35,6 +35,13 @@ header nav img {
     height: 50px;
 }
 
+#btnFormulaire:hover {
+	filter: hue-rotate(200deg);
+}
+#btnFormulaireBody:hover {
+	filter: hue-rotate(200deg);
+}
+
 header nav ul li {
     list-style: none;
 }
@@ -55,6 +62,7 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-weight: bold;
 }
 
 header nav div {
@@ -67,6 +75,8 @@ header nav div ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--tertiary-color);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.7);
 }
 
 /* Menu burger */
